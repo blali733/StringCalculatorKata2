@@ -12,8 +12,7 @@ public class Main {
         }else{
             if(numbers.startsWith("//")) {
                 String[] parts = numbers.split("\\n");
-                //delimiter = parts[0].replaceFirst("//","");
-                delimiter = parts[0].replaceFirst("//","").substring(0,1);
+                delimiter = parts[0].replaceFirst("//","");
                 numbers = numbers.replaceFirst(parts[0]+"\\n","");
             }else {
                 delimiter = "[,\\n]";
