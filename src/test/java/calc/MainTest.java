@@ -70,4 +70,9 @@ public class MainTest {
     public void testAddForMultipleDelimiters() throws Exception {
         assertEquals(10, calc.add("//[;;;][@]\n4;;;3@2;;;1"));
     }
+
+    @Test
+    public void testAddForMoreMultipleDelimiters() throws Exception {
+        assertEquals(10, calc.add("//[;;;][@][%]\n4;;;3@2%1"));
+    }
 }
