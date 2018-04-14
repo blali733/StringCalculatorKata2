@@ -31,4 +31,9 @@ public class MainTest {
     public void testAddForOtherDelimeter(){
         assertEquals(10, calc.add("4\n3,2,1"));
     }
+
+    @Test
+    public void testAddForCustomDelimeter(){
+        assertEquals(10, calc.add("//;\n4;3;2;1"));
+    }
 }
