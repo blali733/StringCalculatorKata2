@@ -7,7 +7,8 @@ public class Main {
         }else if(numbers.length() == 1){
             return Integer.parseInt(numbers);
         }else {
-            return 3;
+            String[] arguments = numbers.split(",");
+            return Integer.parseInt(arguments[0])+Integer.parseInt(arguments[1]);
         }
     }
 }
