@@ -1,8 +1,5 @@
 package calc;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public int add(String numbers) throws Exception {
@@ -31,7 +28,8 @@ public class Main {
                 throw new Exception(negatives);
             }
             for (String number : arguments) {
-                result += Integer.parseInt(number);
+                if(number.length() < 4)
+                    result += Integer.parseInt(number);
             }
             return result;
         }
