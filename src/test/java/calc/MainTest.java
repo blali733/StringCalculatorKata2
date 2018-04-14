@@ -60,4 +60,9 @@ public class MainTest {
     public void testAddForLongNumbers() throws Exception {
         assertEquals(2, calc.add("2,1005"));
     }
+
+    @Test
+    public void testAddForLongDelimiters() throws Exception {
+        assertEquals(10, calc.add("//;;;\n4;;;3;;;2;;;1"));
+    }
 }
