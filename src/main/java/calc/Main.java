@@ -1,14 +1,23 @@
 package calc;
 
 public class Main {
+    Integer result = 0;
+
     public int add(String numbers) {
-        if(numbers.length() == 0) {
-            return 0;
-        }else if(numbers.length() == 1){
-            return Integer.parseInt(numbers);
-        }else {
-            String[] arguments = numbers.split(",");
-            return Integer.parseInt(arguments[0])+Integer.parseInt(arguments[1]);
+        switch (numbers.length()) {
+            case 0:{
+                return 0;
+            }
+            case 1: {
+                return Integer.parseInt(numbers);
+            }
+            default: {
+                String[] arguments = numbers.split(",");
+                for (String number : arguments) {
+                    result += Integer.parseInt(number);
+                }
+                return result;
+            }
         }
     }
 }
