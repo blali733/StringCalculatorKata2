@@ -11,4 +11,9 @@ public class MainTest {
     public void testAddForEmptyString() {
         assertEquals(0, calc.add(""));
     }
+
+    @Test
+    public void testAddOneNumber() {
+        assertEquals(1, calc.add("1"));
+    }
 }
