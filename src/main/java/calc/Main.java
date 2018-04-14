@@ -12,7 +12,7 @@ public class Main {
                 return Integer.parseInt(numbers);
             }
             default: {
-                String[] arguments = numbers.split(",");
+                String[] arguments = numbers.split("[,\\n]");
                 for (String number : arguments) {
                     result += Integer.parseInt(number);
                 }

@@ -26,4 +26,9 @@ public class MainTest {
     public void testAddForNNumbers(){
         assertEquals(10, calc.add("4,3,2,1"));
     }
+
+    @Test
+    public void testAddForOtherDelimeter(){
+        assertEquals(10, calc.add("4\n3,2,1"));
+    }
 }
