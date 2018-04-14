@@ -16,4 +16,9 @@ public class MainTest {
     public void testAddOneNumber() {
         assertEquals(1, calc.add("1"));
     }
+
+    @Test
+    public void testAddTwoNumbers() {
+        assertEquals(3, calc.add("1,2"));
+    }
 }
