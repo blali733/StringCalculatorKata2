@@ -49,4 +49,15 @@ public class MainTest {
         }
         assertTrue(thrown);
     }
+
+    @Test
+    public void testAddForConsecutiveAdditions() throws Exception{
+        assertEquals(5, calc.add("2,3"));
+        assertEquals(5, calc.add("2,3"));
+    }
+
+    @Test
+    public void testAddForLongNumbers() throws Exception {
+        assertEquals(2, calc.add("2,1005"));
+    }
 }

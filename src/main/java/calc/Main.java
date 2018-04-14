@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    Integer result = 0;
 
     public int add(String numbers) throws Exception {
+        Boolean throwEx = false;
+        String negatives = "negatives not allowed:";
+        String delimiter;
+        Integer result = 0;
         if(numbers.length() == 0) {
             return 0;
         }else{
-            String delimiter;
             if(numbers.startsWith("//")) {
                 String[] parts = numbers.split("\\n");
                 delimiter = parts[0].replaceFirst("//","");
@@ -19,8 +21,6 @@ public class Main {
                 delimiter = "[,\\n]";
             }
             String[] arguments = numbers.split(delimiter);
-            Boolean throwEx = false;
-            String negatives = "negatives not allowed:";
             for (String number : arguments) {
                 if(number.startsWith("-")){
                     negatives += " " + number;
