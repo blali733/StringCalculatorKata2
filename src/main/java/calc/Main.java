@@ -4,20 +4,22 @@ public class Main {
     Integer result = 0;
 
     public int add(String numbers) {
-        switch (numbers.length()) {
-            case 0:{
-                return 0;
+        if(numbers.length() == 0) {
+            return 0;
+        }else{
+            String delimiter;
+            if(numbers.startsWith("//")) {
+                String[] parts = numbers.split("\\n");
+                delimiter = parts[0].replaceFirst("//","");
+                numbers = numbers.replaceFirst(parts[0]+"\\n","");
+            }else {
+                delimiter = "[,\\n]";
             }
-            case 1: {
-                return Integer.parseInt(numbers);
+            String[] arguments = numbers.split(delimiter);
+            for (String number : arguments) {
+                result += Integer.parseInt(number);
             }
-            default: {
-                String[] arguments = numbers.split("[,\\n]");
-                for (String number : arguments) {
-                    result += Integer.parseInt(number);
-                }
-                return result;
-            }
+            return result;
         }
     }
 }
