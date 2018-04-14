@@ -35,14 +35,14 @@ public class MainTest {
 
     @Test
     public void testAddForCustomDelimiter() throws Exception {
-        assertEquals(10, calc.add("//;\n4;3;2;1"));
+        assertEquals(10, calc.add("//[;]\n4;3;2;1"));
     }
 
     @Test
     public void testAddForNegativeNumbers(){
         Boolean thrown = false;
         try {
-            calc.add("//;\n-4;3;-2;1");
+            calc.add("//[;]\n-4;3;-2;1");
         }catch (Exception e){
             thrown = true;
             assertEquals("negatives not allowed: -4 -2", e.getMessage());
@@ -63,7 +63,7 @@ public class MainTest {
 
     @Test
     public void testAddForLongDelimiters() throws Exception {
-        assertEquals(10, calc.add("//;;;\n4;;;3;;;2;;;1"));
+        assertEquals(10, calc.add("//[;;;]\n4;;;3;;;2;;;1"));
     }
 
     @Test
