@@ -1,5 +1,5 @@
   language: java
   before_install:
    - chmod +x gradlew
-   notifications:
-     email: false
+  notifications:
+    email: false
